@@ -5,6 +5,8 @@
 #include "Iterator.h"
 #include "List_iterator.h"
 #include "Vector_iterator.h"
+#include "PrintController.h"
+
 using namespace std;
 
 void print(Iterator& it)
@@ -16,7 +18,10 @@ void print(Iterator& it)
         nextIterator = it.next();
     }
 }
-
+/*
+Write a template function f() that adds the elements of one vector<T> to the elements ofanother;
+for example, f(v1, v2) should do v1[i] += v2[i] for each element of v1.
+*/
 template<typename T>
 void f(vector<T>& v1, vector<T>& v2)
 {
@@ -41,4 +46,6 @@ int main()
     cout << endl;
     print(vIterator);
 
+    PrintController controller1;
+    controller1.show();
 }
