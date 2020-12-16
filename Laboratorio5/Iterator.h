@@ -1,6 +1,6 @@
 #pragma once
 class Iterator
 {
-protected:
+public:
 	virtual double* next() = 0;
 };
