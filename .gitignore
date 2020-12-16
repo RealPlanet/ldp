@@ -3,7 +3,7 @@
 **/Release
 **/x64
 **/x84
-**/build
+**/_build
 **/ignore
 *.sln
 *.exe
