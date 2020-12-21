@@ -49,3 +49,8 @@ int main()
     PrintController controller1;
     controller1.show();
 }
+
+/*
+    Esercizio 3 non fatto per poca chiarezza nella consegna, Shape vista a lezione ma alcuni variabili membro sono oggetti
+    di librerie non presenti in C++
+*/
