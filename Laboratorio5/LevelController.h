@@ -1,7 +1,7 @@
 #pragma once
 #include "Controller.h"
 #include "Shape.h"
-class LevelController : Controller
+class LevelController : public Controller
 {
 private:
 	Shape controlledShape;

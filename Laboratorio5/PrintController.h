@@ -1,7 +1,7 @@
 #pragma once
 #include "Controller.h"
 
-class PrintController : Controller
+class PrintController : public Controller
 {
 public:
 	void show() override;
