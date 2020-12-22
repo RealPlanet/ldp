@@ -11,6 +11,6 @@ public:
 	double perimeter() const override;
 	double area() const override;
 
-	double getSide() const; //Returns lenght of one side of the Rhombus
+	double getSide() const; //Returns length of one side of the Rhombus
 };
 

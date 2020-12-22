@@ -9,11 +9,11 @@ DoubleVector::DoubleVector(std::initializer_list<double> list) : size{(int)list.
 {
     copy(list.begin(), list.end(), array_ptr);
 }
-DoubleVector::DoubleVector(const DoubleVector& vector) : size{vector.Lenght()}, array_ptr{new double[size]}
+DoubleVector::DoubleVector(const DoubleVector& vector) : size{vector.length()}, array_ptr{new double[size]}
 {
     copy(vector.array_ptr, vector.array_ptr + size, array_ptr);
 }
-DoubleVector::DoubleVector(  DoubleVector&& vector  ) : size{vector.Lenght()}, array_ptr{vector.array_ptr}
+DoubleVector::DoubleVector(  DoubleVector&& vector  ) : size{vector.length()}, array_ptr{vector.array_ptr}
 {
     vector.size = 0;
     vector.array_ptr = nullptr;
@@ -61,12 +61,12 @@ double& DoubleVector::operator[](int const _index)const
 
 DoubleVector& DoubleVector::operator=(const DoubleVector& vector)
 {
-    double* arrNew = new double[vector.Lenght()]{0};
-    copy(vector.array_ptr, vector.array_ptr + vector.Lenght(), arrNew);
+    double* arrNew = new double[vector.length()]{0};
+    copy(vector.array_ptr, vector.array_ptr + vector.length(), arrNew);
     
     delete[] array_ptr;
     array_ptr = arrNew;
-    size = vector.Lenght();
+    size = vector.length();
     return *this;
 }
 
@@ -74,7 +74,7 @@ DoubleVector& DoubleVector::operator=(DoubleVector&& vector)
 {
     delete[] array_ptr;
     array_ptr = vector.array_ptr;
-    size = vector.Lenght();
+    size = vector.length();
     
     vector.array_ptr = nullptr;
     vector.size = 0;

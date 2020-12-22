@@ -94,22 +94,22 @@ char* findx(const char* s, const char* x)
 {
     bool found = false;
 
-    int charLenghtS = countCharacters(s);
-    int charLenghtX = countCharacters(x);
+    int charlengthS = countCharacters(s);
+    int charlengthX = countCharacters(x);
 
-    if(charLenghtX > charLenghtS) return nullptr;
+    if(charlengthX > charlengthS) return nullptr;
 
-    int lenght = charLenghtS - charLenghtX + 1; //Non mi è possibile trovare la sottostringa negli nei caratteri charLenghtS - lenght della string quindi non li controllo
+    int length = charlengthS - charlengthX + 1; //Non mi è possibile trovare la sottostringa negli nei caratteri charlengthS - length della string quindi non li controllo
 
-    for(int i = 0; i < lenght; i++) //Scorri la stringa s
+    for(int i = 0; i < length; i++) //Scorri la stringa s
     {
         if(*(s + i) == *x) //Se il carattere s+i corrisponde al primo carattere di X allora verifica se è una substring
         {
-            for(int j = 1; j < charLenghtX; j++)
+            for(int j = 1; j < charlengthX; j++)
             {
                 if( *(s + i + j) == *(x + j) ) //Se i due caratteri corrispondono continua...
                 {
-                    if(j+1 == charLenghtX)//Se siamo arrivati alla fine della string X allora abbiamo trovato la sottostringa
+                    if(j+1 == charlengthX)//Se siamo arrivati alla fine della string X allora abbiamo trovato la sottostringa
                     {
                         found = true;
                         break;
