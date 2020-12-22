@@ -2,7 +2,7 @@
 #include "Shape.h"
 class Rect : public Shape
 {
-private:
+protected:
 	double b_side;
 	double h_side;
 public:

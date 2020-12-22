@@ -7,6 +7,11 @@
 #include <algorithm>
 #include <numeric>
 
+#include "Square.h"
+#include "Rect.h"
+#include "Parallelogram.h"
+#include "Rhombus.h"
+
 using namespace std;
 
 vector<double> manipulate_vector(const vector<double>& input_vector);
@@ -32,6 +37,36 @@ int main()
 	{
 		cout << *(cursor++) << " ";
 	}
+
+	cout << endl;
+	cout << endl;
+
+	Square square(5);
+	Rect rect(2, 3);
+	Parallelogram paral(2, 3, 4);
+	Rhombus romb(10, 4);
+
+	cout << "Perimetro e area del Square di lato 5: " << endl;
+	cout << square.perimeter() << endl;
+	cout << square.area() << endl;
+
+	cout << "Perimetro e area del Rect di base 2 e altezza 3: " << endl;
+	cout << rect.perimeter() << endl;
+	cout << rect.area() << endl;
+
+	cout << "Perimetro e area del Parallelogram di base 2, altezza 3 e lunghezza lato obliquo 4: " << endl;
+	cout << paral.perimeter() << endl;
+	cout << paral.area() << endl;
+
+	cout << "Perimetro e area del Rhombus di diagonale maggiore 10 e diagonale minore 4: " << endl;
+	cout << romb.perimeter() << endl;
+	cout << romb.area() << endl;
+
+	cout << "Test di what_shape: " << endl;
+	cout << square.what_shape() << endl;
+	cout << rect.what_shape() << endl;
+	cout << paral.what_shape() << endl;
+	cout << romb.what_shape() << endl;
 }
 
 /*
