@@ -106,7 +106,9 @@ vector<double> manipulate_vector(const vector<double>& input_vector)
 	int negativeNumbers = count_if(input_vector.begin(), input_vector.end(), isNegative);
 	int positiveNumbers = count_if(input_vector.begin(), input_vector.end(), isPositive);
 
+	sortedVector.reserve(sortedVector.size() + reversedVector.size() + 4);
 	sortedVector.insert(sortedVector.end(), reversedVector.begin(), reversedVector.end());
+
 	sortedVector.push_back(accResult);
 	sortedVector.push_back(halfAccResult);
 	sortedVector.push_back(negativeNumbers);
