@@ -6,6 +6,8 @@
 #include "List_iterator.h"
 #include "Vector_iterator.h"
 #include "PrintController.h"
+#include "Shape.h"
+#include "LevelController.h"
 
 using namespace std;
 
@@ -48,9 +50,10 @@ int main()
 
     PrintController controller1;
     controller1.show();
-}
 
-/*
-    Esercizio 3 non fatto per poca chiarezza nella consegna, Shape vista a lezione ma alcuni variabili membro sono oggetti
-    di librerie non presenti in C++
-*/
+    
+    Shape shapeTest;
+    LevelController controller2(shapeTest);
+
+    controller2.set_level(10);
+}
